@@ -46,30 +46,30 @@ Main references:\
 ## Tables and Descriptions
 
 **Adobe_AdditionalMetadata** - Holds pretty much all the metadata for a single image file. XMP is the important column here. Adobe used to store this information as XML data but decided to store it as binary data in newer versions of LR\
-Adobe_faceProperties\
-Adobe_imageDevelopBeforeSettings\
+**Adobe_faceProperties**\
+**Adobe_imageDevelopBeforeSettings**\
 **Adobe_imageDevelopSettings** - Settings from sliders applied to the image. Column "text" has a JSON with adjustments applied.\
 **Adobe_imageProofSettings** - Basic information about ICC profiles loaded into LR\
-Adobe_imageProperties\
+**Adobe_imageProperties**\
 **Adobe_images** - Basic information about an image\
-Adobe_libraryImageDevelop3DLUTColorTable\
-Adobe_libraryImageDevelopHistoryStep\
-Adobe_libraryImageDevelopSnapshot\
-Adobe_libraryImageFaceProcessHistory\
+**Adobe_libraryImageDevelop3DLUTColorTable**\
+**Adobe_libraryImageDevelopHistoryStep**\
+**Adobe_libraryImageDevelopSnapshot**\
+**Adobe_libraryImageFaceProcessHistory**\
 **Adobe_namedIdentityPlate** - LR Identity plate information\
-Adobe_variables\
-Adobe_variablesTable\
-AgDNGProxyInfo\
-AgDNGProxyInfoUpdater\
-AgDeletedOzAlbumAssetIds\
-AgDeletedOzAlbumIds\
-AgDeletedOzAssetIds\
-AgDeletedOzSpaceIds\
-AgFolderContent\
-AgHarvestedDNGMetadata\
-AgHarvestedExifMetadata\
-AgHarvestedIptcMetadata\
-AgHarvestedMetadataWorklist\
+**Adobe_variables**\
+**Adobe_variablesTable**\
+**AgDNGProxyInfo**\
+**AgDNGProxyInfoUpdater**\
+**AgDeletedOzAlbumAssetIds**\
+**AgDeletedOzAlbumIds**\
+**AgDeletedOzAssetIds**\
+**AgDeletedOzSpaceIds**\
+**AgFolderContent**\
+**AgHarvestedDNGMetadata**\
+**AgHarvestedExifMetadata**\
+**AgHarvestedIptcMetadata**\
+**AgHarvestedMetadataWorklist**\
 **AgInternedExifCameraModel** - Camera model name\
 **AgInternedExifCameraSN** - Camera model serial number\
 **AgInternedExifLens** - Lens name\
@@ -77,84 +77,84 @@ AgHarvestedMetadataWorklist\
 **AgInternedIptcCountry** - IPTC Country information. This table also gets populated for photos with GPS coordinates, from the Map module\
 **AgInternedIptcCreator** - IPTC Creator information.\
 **AgInternedIptcIsoCountryCode** - IPTC Country (ISO Code) information. This table also gets populated for photos with GPS coordinates, from the Map module\
-AgInternedIptcJobIdentifier\
+**AgInternedIptcJobIdentifier**\
 **AgInternedIptcLocation** - Stores the image's 'sublocation'. This table also gets populated for photos with GPS coordinates, from the Map module\
 **AgInternedIptcState** - IPTC State information. This table also gets populated for photos with GPS coordinates, from the Map module. Not all images get a 'sublocation'\
-AgLastCatalogExport\
-AgLibraryCollection\
-AgLibraryCollectionChangeCounter\
-AgLibraryCollectionContent\
-AgLibraryCollectionCoverImage\
-AgLibraryCollectionImage\
-AgLibraryCollectionImageChangeCounter\
-AgLibraryCollectionImageOzAlbumAssetIds\
-AgLibraryCollectionImageOzSortOrder\
-AgLibraryCollectionOzAlbumIds\
-AgLibraryCollectionStack\
-AgLibraryCollectionStackData\
-AgLibraryCollectionStackImage\
-AgLibraryCollectionSyncedAlbumData\
-AgLibraryCollectionTrackedAssets\
-AgLibraryFace\
-AgLibraryFaceCluster\
-AgLibraryFaceData\
-AgLibraryFile\
-AgLibraryFileAssetMetadata\
-AgLibraryFolder\
-AgLibraryFolderFavorite\
-AgLibraryFolderLabel\
-AgLibraryFolderStack\
-AgLibraryFolderStackData\
-AgLibraryFolderStackImage\
-AgLibraryIPTC\
-AgLibraryImageChangeCounter\
-AgLibraryImageOzAssetIds\
-AgLibraryImageSearchData\
-AgLibraryImageSyncedAssetData\
-AgLibraryImageXMPUpdater\
-AgLibraryImport\
-AgLibraryImportImage\
+**AgLastCatalogExport**\
+**AgLibraryCollection**\
+**AgLibraryCollectionChangeCounter**\
+**AgLibraryCollectionContent**\
+**AgLibraryCollectionCoverImage**\
+**AgLibraryCollectionImage**\
+**AgLibraryCollectionImageChangeCounter**\
+**AgLibraryCollectionImageOzAlbumAssetIds**\
+**AgLibraryCollectionImageOzSortOrder**\
+**AgLibraryCollectionOzAlbumIds**\
+**AgLibraryCollectionStack**\
+**AgLibraryCollectionStackData**\
+**AgLibraryCollectionStackImage**\
+**AgLibraryCollectionSyncedAlbumData**\
+**AgLibraryCollectionTrackedAssets**\
+**AgLibraryFace**\
+**AgLibraryFaceCluster**\
+**AgLibraryFaceData**\
+**AgLibraryFile**\
+**AgLibraryFileAssetMetadata**\
+**AgLibraryFolder**\
+**AgLibraryFolderFavorite**\
+**AgLibraryFolderLabel**\
+**AgLibraryFolderStack**\
+**AgLibraryFolderStackData**\
+**AgLibraryFolderStackImage**\
+**AgLibraryIPTC**\
+**AgLibraryImageChangeCounter**\
+**AgLibraryImageOzAssetIds**\
+**AgLibraryImageSearchData**\
+**AgLibraryImageSyncedAssetData**\
+**AgLibraryImageXMPUpdater**\
+**AgLibraryImport**\
+**AgLibraryImportImage**\
 **AgLibraryKeyword** - List of all the keywords used in the catalog\
-AgLibraryKeywordCooccurrence\
-AgLibraryKeywordFace\
+**AgLibraryKeywordCooccurrence**\
+**AgLibraryKeywordFace**\
 **AgLibraryKeywordImage** - Keywords and all associated images\
-AgLibraryKeywordPopularity\
-AgLibraryKeywordSynonym\
-AgLibraryOzCommentIds\
-AgLibraryOzFavoriteIds\
-AgLibraryOzFeedbackInfo\
-AgLibraryPublishedCollection\
-AgLibraryPublishedCollectionContent\
-AgLibraryPublishedCollectionImage\
-AgLibraryRootFolder\
-AgLibraryUpdatedImages\
-AgMRULists\
-AgMetadataSearchIndex\
-AgOutputImageAsset\
-AgOzSpaceAlbumIds\
-AgOzSpaceIds\
-AgPendingOzAlbumAssetIds\
-AgPendingOzAssetBinaryDownloads\
-AgPendingOzAssets\
-AgPhotoComment\
-AgPhotoProperty\
-AgPhotoPropertyArrayElement\
-AgPhotoPropertySpec\
-AgPublishListenerWorklist\
-AgRemotePhoto\
-AgSearchablePhotoProperty\
-AgSearchablePhotoPropertyArrayElement\
-AgSourceColorProfileConstants\
-AgSpecialSourceContent\
-AgTempImages\
-AgUnsupportedOzAssets\
-AgVideoInfo\
-LrMobileSyncChangeCounter\
-MigratedCollectionImages\
-MigratedCollections\
-MigratedImages\
-MigratedInfo\
-MigrationSchemaVersion\
+**AgLibraryKeywordPopularity**\
+**AgLibraryKeywordSynonym**\
+**AgLibraryOzCommentIds**\
+**AgLibraryOzFavoriteIds**\
+**AgLibraryOzFeedbackInfo**\
+**AgLibraryPublishedCollection**\
+**AgLibraryPublishedCollectionContent**\
+**AgLibraryPublishedCollectionImage**\
+**AgLibraryRootFolder**\
+**AgLibraryUpdatedImages**\
+**AgMRULists**\
+**AgMetadataSearchIndex**\
+**AgOutputImageAsset**\
+**AgOzSpaceAlbumIds**\
+**AgOzSpaceIds**\
+**AgPendingOzAlbumAssetIds**\
+**AgPendingOzAssetBinaryDownloads**\
+**AgPendingOzAssets**\
+**AgPhotoComment**\
+**AgPhotoProperty**\
+**AgPhotoPropertyArrayElement**\
+**AgPhotoPropertySpec**\
+**AgPublishListenerWorklist**\
+**AgRemotePhoto**\
+**AgSearchablePhotoProperty**\
+**AgSearchablePhotoPropertyArrayElement**\
+**AgSourceColorProfileConstants**\
+**AgSpecialSourceContent**\
+**AgTempImages**\
+**AgUnsupportedOzAssets**\
+**AgVideoInfo**\
+**LrMobileSyncChangeCounter**\
+**MigratedCollectionImages**\
+**MigratedCollections**\
+**MigratedImages**\
+**MigratedInfo**\
+**MigrationSchemaVersion**\
 
 ## Sample SQLite Queries
 
