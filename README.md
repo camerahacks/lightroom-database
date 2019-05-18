@@ -11,8 +11,8 @@ All the tables prefixed with 'Ag' hold image/photo information. Ag is the period
 AgLibraryFile
 	Base table listing all the images in the LR catalog. Table has columns with basic information like file name and extension.
 
-AgLibraryFolder 
-	Folder structure under the root folder.
+AgLibraryFolder\
+	Folder structure under the root folder.\
 	Main reference: ```AgLibraryFile.folder = AgLibraryFolder.id_local```
 
 AgLibraryKeyword
