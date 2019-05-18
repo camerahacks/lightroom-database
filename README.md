@@ -1,5 +1,7 @@
 # Lightroom Unofficial Database Table Catalog
 
+More information @ [{DPHacks}](https://dphacks.com/how-to-canon-camera-control-api-ccapi/) website - a website for everything camera hack related
+
 This is a work in progress to document Adobe Lightroom's SQLite database structure.
 
 ## Overall Structure
