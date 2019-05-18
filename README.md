@@ -15,7 +15,8 @@ Base table listing all the images in the LR catalog. Table has columns with basi
 **AgLibraryFolder**
 
 Folder structure under the root folder.\
-Main reference: ```AgLibraryFile.folder = AgLibraryFolder.id_local```
+Main references:\
+```AgLibraryFile.folder = AgLibraryFolder.id_local```
 
 **AgLibraryKeyword**
 
@@ -24,14 +25,15 @@ List of all the keywords used
 **AgLibraryKeywordImage**
 
 Linkage between images and assigned keywords\
-Main reference: ```AgLibraryKeywordImage.image =  Adobe_images.id_local``` ```AgLibraryKeywordImage.tag = AgLibraryKeyword.id_local```
+Main references:\
+```AgLibraryKeywordImage.image =  Adobe_images.id_local```\
+```AgLibraryKeywordImage.tag = AgLibraryKeyword.id_local```
 
 **AgHarvestedExifMetadata**
 
 Holds basic EXIF information like reference to Camera Model, Lens, Date, Focal Length, ISO, Aperture, and Shutter Speed\
-Main reference: ```AgHarvestedExifMetadata.image = AgLibraryFile.id_local```
-
-
+Main references:\
+```AgHarvestedExifMetadata.image = AgLibraryFile.id_local```
 
 ## Tables and Descriptions
 
@@ -146,4 +148,34 @@ MigratedImages\
 MigratedInfo\
 MigrationSchemaVersion\
 
-## Tables and Fields
+## Sample SQL Queries
+
+### Number of Pictures by Camera
+
+```sql
+SELECT AgInternedExifCameraModel.value as 'Camera', count(AgHarvestedExifMetadata.id_local) as 'Count'
+FROM
+	AgHarvestedExifMetadata,
+	AgInternedExifCameraModel
+WHERE
+	AgHarvestedExifMetadata.cameraModelRef = AgInternedExifCameraModel.id_local
+GROUP BY
+	Camera
+ORDER BY
+	Count DESC
+```
+
+### Number of Pictures by Lens
+
+```sql
+SELECT AgInternedExifLens.value as 'Lens', count(AgHarvestedExifMetadata.id_local) as 'Count'
+FROM
+	AgHarvestedExifMetadata,
+	AgInternedExifLens
+WHERE
+	AgHarvestedExifMetadata.lensRef = AgInternedExifLens.id_local
+GROUP BY
+	Lens
+ORDER BY
+	Count DESC
+```
