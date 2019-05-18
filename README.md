@@ -1,4 +1,4 @@
-# Lightroom Unofficial Database Table Catalog
+# Lightroom Unofficial Database Table Reference
 
 More information @ [{DPHacks}](https://dphacks.com/how-to-canon-camera-control-api-ccapi/) website - a website for everything camera hack related
 
@@ -37,20 +37,26 @@ Holds basic EXIF information like reference to Camera Model, Lens, Date, Focal L
 Main references:\
 ```AgHarvestedExifMetadata.image = AgLibraryFile.id_local```
 
+**AgHarvestedIptcMetadata**
+
+Holds basic IPTC information like reference to Camera Model, Lens, Date, Focal Length, ISO, Aperture, and Shutter Speed\
+Main references:\
+
+
 ## Tables and Descriptions
 
-Adobe_AdditionalMetadata\
+**Adobe_AdditionalMetadata** - Holds pretty much all the metadata for a single image file. XMP is the important column here. Adobe used to store this information as XML data but decided to store it as binary data in newer versions of LR\
 Adobe_faceProperties\
 Adobe_imageDevelopBeforeSettings\
 **Adobe_imageDevelopSettings** - Settings from sliders applied to the image. Column "text" has a JSON with adjustments applied.\
 **Adobe_imageProofSettings** - Basic information about ICC profiles loaded into LR\
 Adobe_imageProperties\
-Adobe_images - Basic information about an image\
+**Adobe_images** - Basic information about an image\
 Adobe_libraryImageDevelop3DLUTColorTable\
 Adobe_libraryImageDevelopHistoryStep\
 Adobe_libraryImageDevelopSnapshot\
 Adobe_libraryImageFaceProcessHistory\
-Adobe_namedIdentityPlate - LR Identity plate information\
+**Adobe_namedIdentityPlate** - LR Identity plate information\
 Adobe_variables\
 Adobe_variablesTable\
 AgDNGProxyInfo\
@@ -64,16 +70,16 @@ AgHarvestedDNGMetadata\
 AgHarvestedExifMetadata\
 AgHarvestedIptcMetadata\
 AgHarvestedMetadataWorklist\
-AgInternedExifCameraModel\
-AgInternedExifCameraSN\
-AgInternedExifLens\
-AgInternedIptcCity\
-AgInternedIptcCountry\
-AgInternedIptcCreator\
-AgInternedIptcIsoCountryCode\
+**AgInternedExifCameraModel** - Camera model name\
+**AgInternedExifCameraSN** - Camera model serial number\
+**AgInternedExifLens** - Lens name\
+**AgInternedIptcCity** - IPTC City information. This table also gets populated for photos with GPS coordinates, from the Map module\
+**AgInternedIptcCountry** - IPTC Country information. This table also gets populated for photos with GPS coordinates, from the Map module\
+**AgInternedIptcCreator** - IPTC Creator information.\
+**AgInternedIptcIsoCountryCode** - IPTC Country (ISO Code) information. This table also gets populated for photos with GPS coordinates, from the Map module\
 AgInternedIptcJobIdentifier\
-AgInternedIptcLocation\
-AgInternedIptcState\
+**AgInternedIptcLocation** - Stores the image's 'sublocation'. This table also gets populated for photos with GPS coordinates, from the Map module\
+**AgInternedIptcState** - IPTC State information. This table also gets populated for photos with GPS coordinates, from the Map module. Not all images get a 'sublocation'\
 AgLastCatalogExport\
 AgLibraryCollection\
 AgLibraryCollectionChangeCounter\
@@ -108,10 +114,10 @@ AgLibraryImageSyncedAssetData\
 AgLibraryImageXMPUpdater\
 AgLibraryImport\
 AgLibraryImportImage\
-AgLibraryKeyword\
+**AgLibraryKeyword** - List of all the keywords used in the catalog\
 AgLibraryKeywordCooccurrence\
 AgLibraryKeywordFace\
-AgLibraryKeywordImage\
+**AgLibraryKeywordImage** - Keywords and all associated images\
 AgLibraryKeywordPopularity\
 AgLibraryKeywordSynonym\
 AgLibraryOzCommentIds\
@@ -150,7 +156,7 @@ MigratedImages\
 MigratedInfo\
 MigrationSchemaVersion\
 
-## Sample SQL Queries
+## Sample SQLite Queries
 
 ### Number of Pictures by Camera
 
