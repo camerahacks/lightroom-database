@@ -9,22 +9,27 @@ All the tables prefixed with 'Ag' hold image/photo information. Ag is the period
 ## Main Tables
 
 **AgLibraryFile**
-	Base table listing all the images in the LR catalog. Table has columns with basic information like file name and extension.
 
-**AgLibraryFolder**\
-	Folder structure under the root folder.\
-	Main reference: ```AgLibraryFile.folder = AgLibraryFolder.id_local```
+Base table listing all the images in the LR catalog. Table has columns with basic information like file name and extension.
 
-**AgLibraryKeyword**\
-	List of all the keywords used
+**AgLibraryFolder**
 
-**AgLibraryKeywordImage**\
-	Linkage between images and assigned keywords\
-	Main reference: ```AgLibraryKeywordImage.image =  Adobe_images.id_local``` ```AgLibraryKeywordImage.tag = AgLibraryKeyword.id_local```
+Folder structure under the root folder.\
+Main reference: ```AgLibraryFile.folder = AgLibraryFolder.id_local```
 
-**AgHarvestedExifMetadata**\
-	Holds basic EXIF information like reference to Camera Model, Lens, Date, Focal Length, ISO, Aperture, and Shutter Speed\
-	Main reference: ```AgHarvestedExifMetadata.image = AgLibraryFile.id_local```
+**AgLibraryKeyword**
+
+List of all the keywords used
+
+**AgLibraryKeywordImage**
+
+Linkage between images and assigned keywords\
+Main reference: ```AgLibraryKeywordImage.image =  Adobe_images.id_local``` ```AgLibraryKeywordImage.tag = AgLibraryKeyword.id_local```
+
+**AgHarvestedExifMetadata**
+
+Holds basic EXIF information like reference to Camera Model, Lens, Date, Focal Length, ISO, Aperture, and Shutter Speed\
+Main reference: ```AgHarvestedExifMetadata.image = AgLibraryFile.id_local```
 
 
 
