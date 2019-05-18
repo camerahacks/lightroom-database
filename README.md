@@ -8,22 +8,22 @@ All the tables prefixed with 'Ag' hold image/photo information. Ag is the period
 
 ## Main Tables
 
-AgLibraryFile
+**AgLibraryFile**
 	Base table listing all the images in the LR catalog. Table has columns with basic information like file name and extension.
 
-AgLibraryFolder\
+**AgLibraryFolder**\
 	Folder structure under the root folder.\
 	Main reference: ```AgLibraryFile.folder = AgLibraryFolder.id_local```
 
-AgLibraryKeyword\
+**AgLibraryKeyword**\
 	List of all the keywords used
 
-AgLibraryKeywordImage\
+**AgLibraryKeywordImage**\
 	Linkage between images and assigned keywords\
 	Main reference: ```AgLibraryKeywordImage.image =  Adobe_images.id_local``` ```AgLibraryKeywordImage.tag = AgLibraryKeyword.id_local```
 
-AgHarvestedExifMetadata
-	Holds basic EXIF information like reference to Camera Model, Lens, Date, Focal Length, ISO, Aperture, and Shutter Speed
+**AgHarvestedExifMetadata**\
+	Holds basic EXIF information like reference to Camera Model, Lens, Date, Focal Length, ISO, Aperture, and Shutter Speed\
 	Main reference: ```AgHarvestedExifMetadata.image = AgLibraryFile.id_local```
 
 
@@ -33,8 +33,8 @@ AgHarvestedExifMetadata
 Adobe_AdditionalMetadata\
 Adobe_faceProperties\
 Adobe_imageDevelopBeforeSettings\
-Adobe_imageDevelopSettings - Settings from sliders applied to the image. Column "text" has a JSON with adjustments applied.\
-Adobe_imageProofSettings - Basic information about ICC profiles loaded into LR\
+**Adobe_imageDevelopSettings** - Settings from sliders applied to the image. Column "text" has a JSON with adjustments applied.\
+**Adobe_imageProofSettings** - Basic information about ICC profiles loaded into LR\
 Adobe_imageProperties\
 Adobe_images - Basic information about an image\
 Adobe_libraryImageDevelop3DLUTColorTable\
