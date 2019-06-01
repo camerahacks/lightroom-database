@@ -10,9 +10,16 @@ All the tables prefixed with 'Ag' hold image/photo information. Ag is the period
 
 ## Main Tables
 
+**Adobe_images**
+
+Base table listing all the images in the LR catalog. Contains file dimensions, orientation, and bit depth. Most tables that jold image info will link back to this table.\
+Main references:\
+```Adobe_images.rootFile = AgLibraryFile.id_local```
+
 **AgLibraryFile**
 
-Base table listing all the images in the LR catalog. Table has columns with basic information like file name and extension.
+Detail about all the images in the catalog. Table has columns with basic information like file name and extension.\
+```Adobe_images.rootFile = AgLibraryFile.id_local```
 
 **AgLibraryFolder**
 
